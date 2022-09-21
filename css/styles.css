@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+:root {   
+    --white: #FFFFFF;
+    --light-gray:#30303027; 
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+body {
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    height: 100vh;
+    font-size: 1.125rem;
+}
+header {
+    background-image: url("../images/pattern-bg.png");
+    height: 42%; 
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+h1 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-top: 25px;
+}
+.container-input {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+.container-input input {
+    width: 100%;
+    outline: none;
+    border: solid 1px transparent;
+    padding: 0px 32px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 1.125rem;
+    color: var(--very-dark-gray);
+}
+.container-input input:focus {
+    border-color: var(--very-dark-gray);
+}
+.container-input button {
+    background-color: var(--very-dark-gray);
+    outline: none;
+    border: solid 1px var(--very-dark-gray);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 17px;
+    cursor: pointer;
+}
+/*container info css*/
+.container-info {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    padding: 25px 0px;
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1000;
+    top: 30%;
+    box-shadow: 0px 1px 3px 1px rgb(0 0 0 / 12%);
+}
+.info-col {
+    padding: 0px 25px;
+    width: 100%;
+}
+.border-left {
+    border-left: 1px solid var(--light-gray);
+}
+.key {
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.875rem;
+    letter-spacing: 1.2px;
+}
+.value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--very-dark-gray);
+    margin-top: 10px;
+}
+
+.map-container {
+    height: 100vh;
+    width: 100%;
+}
+/*media queries*/
+@media screen and (max-width: 992px) {
+    .container-info {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .info-col {
+        border: none;
+    }
+}
+@media screen and (max-width: 576px) {
+    header {
+        height: 50vh;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .container-info {
+        width: 85%;
+        top: 26%;
+    }
+    .value {
+        font-size: 1.3rem;
+    }
+}
+
+
