@@ -3,6 +3,7 @@
 
 <div align="center">
    Solution for a challenge from  <a href="https://www.frontendmentor.io" target="_blank">frontendmentor.io</a>.
+   The Geolocation lookup tool provided on this page is an estimate of where the IP address may be located. 
 </div>
 
 <div align="center">
